@@ -29,3 +29,29 @@ duzhe = PythonStudent()
 print(duzhe.name)
 print(duzhe.age)
 duzhe.dohomework()
+
+print(PythonStudent.__dict__)
+print(duzhe.__dict__)
+
+
+
+
+
+
+class Teacher():
+    name = '神魔恋'
+    age = 20
+
+    def say(self):
+        self.name = 'duzhe'
+        self.age = 21
+        print('name is {}'.format(self.name))
+        print('age is {}'.format(self.age))
+    def sayAgain():
+        print(__class__.name)
+        print(__class__.age)
+        print('你好，很高兴再次见到你')
+t = Teacher()
+t.say()
+#调用绑定型变量时，要用类名调用，不能用对象名调用
+Teacher.sayAgain()
