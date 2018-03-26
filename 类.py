@@ -55,3 +55,43 @@ class Cat(paxing_animal):
 #此时自动调用构造函数，因为cat没有构造函数，所以查找父类的构造函数
 #在父类中找到了，调用，并且停止查找
 gaga = Cat()
+print('*'*20)
+
+
+# issubclass函数的语句
+class A():
+    pass
+class B(A):
+    pass
+class C():
+    pass
+print(issubclass(B,A))
+print(issubclass(C,A))
+print('*'*20)
+#isinstance函数的语句
+class A():
+    pass
+
+a = A()
+
+print(isinstance(a,A))
+print('*'*30)
+
+
+#hasattr函数
+class M():
+    name = 'abb'
+
+m = M()
+
+print(hasattr(m,'name'))
+print('*'*30)
+
+#dir函数语法
+class A():
+    name = 'abb'
+    age = 20
+    sentence = '放不下'
+
+a = A()
+print(dir(a))
